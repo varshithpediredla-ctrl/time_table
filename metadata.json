@@ -1,0 +1,6 @@
+{
+  "name": "SmartDyn Faculty Portal",
+  "description": "A high-fidelity institutional control and faculty scheduling portal for SmartDyn Admin, featuring dynamic teacher, HOD, and admin registration, automated leave requests, workload balance visualization, and an interactive Support Vector Machine (SVM) Academic RAG Knowledge Hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
