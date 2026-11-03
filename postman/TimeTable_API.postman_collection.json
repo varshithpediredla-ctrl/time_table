@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Time Table API",
+    "description": "API collection for the College Timetable Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "Get Schedule",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/schedule",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "schedule"]
+        }
+      }
+    },
+    {
+      "name": "Add Schedule Slot",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"day\": \"Mon\",\n  \"time\": \"09:00 - 10:30\",\n  \"subject\": \"Advanced Algorithms\",\n  \"room\": \"Lab B-1\",\n  \"credits\": 3,\n  \"status\": \"optimized\",\n  \"professor\": \"Elena Kostic\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/schedule",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "schedule"]
+        }
+      }
+    },
+    {
+      "name": "Get Faculty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/faculty",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "faculty"]
+        }
+      }
+    },
+    {
+      "name": "Optimize Timetable (AI)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"schedule\": []\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/optimize",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "optimize"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

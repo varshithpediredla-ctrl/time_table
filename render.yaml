@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: time-table-app
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: APP_URL
+        fromService:
+          type: web
+          name: time-table-app
+          property: host
